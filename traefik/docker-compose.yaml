@@ -27,9 +27,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.traefik.entrypoints=http"
       - "traefik.http.routers.traefik.rule=Host(`traefik.irfanmalik.win`)"
-      - "traefik.http.routers.traefik_https.middlewares: basic-auth-global"
-      - "traefik.http.middlewares.basic-auth-global.basicauth.users=iffeeemalik:$$2y$$05$$5RmFH0c.IyiLceph.mwHzeBmryXdEcQTBYejrGB91UIYoe40px2Eu"
-      - "traefik.port: 8080"
+      - "traefik.http.middlewares.traefik-auth.basicauth.users=iffeeemalik:$$2y$$05$$UZSrMaf7uqMTpiVHC3F/EuSEqKk5NWw.QWP1g4UbGg4PfIkF3sTr6"
       - "traefik.http.middlewares.traefik-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
       - "traefik.http.routers.traefik.middlewares=traefik-https-redirect"
@@ -41,8 +39,6 @@ services:
       - "traefik.http.routers.traefik-secure.tls.domains[0].main=irfanmalik.win"
       - "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.irfanmalik.win"
       - "traefik.http.routers.traefik-secure.service=api@internal"
-
-
 networks:
   proxy:
     name: proxy
