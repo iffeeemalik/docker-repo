@@ -14,7 +14,7 @@ services:
       - 443:443
     environment:
       - CF_API_EMAIL=iffeeemalik@gmail.com
-      - CF_DNS_API_TOKEN=aZdaq6YKL7e-3corMJ8UPYZ9ab3xaADtwsrTRJlT
+      - CF_DNS_API_TOKEN=
       # - CF_API_KEY=YOU_API_KEY
     volumes:
       - /etc/localtime:/etc/localtime:ro
