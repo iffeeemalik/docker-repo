@@ -13,7 +13,7 @@ services:
       - 80:80
       - 443:443
     environment:
-      - CF_API_EMAIL=iffeeemalik@gmail.com
+      - CF_API_EMAIL=XXXXX@XX.com
       - CF_DNS_API_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
       # - CF_API_KEY=YOU_API_KEY
     volumes:
